@@ -11,9 +11,10 @@ find_package(geometry_msgs REQUIRED)
 ## Put dynamixel_sdk to /usr/lib & /usr/local/include
 ## so it can be included as default libraries.
 
+
 include_directories(
   include
-  ${dynamixel_proto_INCLUDE_DIRS}
+  ${dynamixel_driver_INCLUDE_DIRS}
 )
 
 add_executable(dxl_x_driver src/dxl_x_driver.cpp)
