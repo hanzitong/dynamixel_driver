@@ -1,0 +1,14 @@
+/dxl_x_driver_node:
+  ros__parameters:
+    baudrate: 9600
+    device_file: /dev/ttyUSB0
+    dxl_id: 1
+    qos_overrides:
+      /parameter_events:
+        publisher:
+          depth: 1000
+          durability: volatile
+          history: keep_last
+          reliability: reliable
+    use_sim_time: false
+
