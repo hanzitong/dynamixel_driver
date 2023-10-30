@@ -1,0 +1,29 @@
+
+import os
+
+from ament_index_python.packages import get_package_share_directory
+
+from launch import LaunchDescription
+from launch_ros.actions import Node
+
+def generate_launch_description():
+    config = os.path.join(
+        get_package_share_directory("dynamixel_driver"),
+        "config",
+        "dxl_x_driver.yaml"
+    )
+
+    return LaunchDescription([
+        Node(
+            package="dynamixel_driver",
+            executable="dxl_x_driver",
+            parameters=[config],
+            namespace="dxl1",
+            name="driver"
+        )
+    ])
+
+
+
+
+
