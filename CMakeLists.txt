@@ -8,9 +8,7 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(geometry_msgs REQUIRED)
-## Put dynamixel_sdk to /usr/lib & /usr/local/include
-## so it can be included as default libraries.
-
+## install dynamixel_sdk to /usr/lib & /usr/local/include
 
 include_directories(
   include
@@ -29,9 +27,13 @@ install(TARGETS
     DESTINATION lib/${PROJECT_NAME}
 )
 
-# install(DIRECTORY launch
-#   DESTINATION share/${PROJECT_NAME}
-# )
+install(DIRECTORY launch
+  DESTINATION share/${PROJECT_NAME}
+)
+
+install(DIRECTORY config
+  DESTINATION share/${PROJECT_NAME}
+)
 
 if(BUILD_TESTING)
     find_package(ament_lint_auto REQUIRED)
