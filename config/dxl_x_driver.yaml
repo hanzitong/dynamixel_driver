@@ -1,5 +1,6 @@
 
-/dxl_x_driver_node:
+# /dxl_x_driver_node:
+/dxl1/driver: # this name should match actual node name
   ros__parameters:
     baudrate: 9600
     device_file: /dev/ttyUSB0
