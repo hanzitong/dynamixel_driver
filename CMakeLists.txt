@@ -11,8 +11,8 @@ find_package(geometry_msgs REQUIRED)
 ## memo: install dynamixel_sdk to /usr/lib & /usr/local/include
 
 include_directories(
-  include
-  ${dynamixel_driver_INCLUDE_DIRS}
+    include
+    ${dynamixel_driver_INCLUDE_DIRS}
 )
 
 add_library(dxl_driver_lib src/DxlXDriver.cpp)
@@ -34,13 +34,15 @@ install(TARGETS
     DESTINATION lib/${PROJECT_NAME}
 )
 
-install(DIRECTORY launch
+install(DIRECTORY 
+    launch
+    config
   DESTINATION share/${PROJECT_NAME}
 )
 
-install(DIRECTORY config
-  DESTINATION share/${PROJECT_NAME}
-)
+# install(DIRECTORY config
+#   DESTINATION share/${PROJECT_NAME}
+# )
 
 if(BUILD_TESTING)
     find_package(ament_lint_auto REQUIRED)

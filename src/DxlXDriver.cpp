@@ -1,6 +1,5 @@
 
 
-
 #include <chrono>
 #include <functional>
 #include <string>
@@ -219,23 +218,3 @@ bool DxlXDriver::step_disactivate(){
         return true;
     }
 }
-
-// int dxl_id_;
-// int baudrate_;
-// const char* device_file_;
-// Dxl_instruction dxl_instruction_;
-// bool dxl_is_ready_;
-// uint8_t dxl_error_;
-// double goal_velocity_;
-// dynamixel::PortHandler *portHandler_;
-// dynamixel::PacketHandler *packetHandler_;
-// rclcpp::TimerBase::SharedPtr timer_;
-// rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr publisher_;
-// rclcpp::Subscription<geometry_msgs::msg::Twist>::SharedPtr subscription_;
-
-
-
-
-
-
-
